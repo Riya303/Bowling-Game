@@ -58,4 +58,18 @@ public class BowlingGameTest {
 	
 		assertEquals(39, bg.score());
 	}
+	@Test
+	public void testAllSpare() {
+		this.pinsdown[] = {5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5};
+        bg.setFrame(pinsdown);
+	
+		assertEquals(150, bg.score());
+	}
+	@Test
+	public void testScenario() {
+		this.pinsdown[] = {4,3,10,4,5,1,3,0,4,2,5,8,0,9,1,6,2,2,3};
+        bg.setFrame(pinsdown);
+	
+		assertEquals(150, bg.score());
+	}
 }
